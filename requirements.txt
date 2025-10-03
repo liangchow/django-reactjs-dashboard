@@ -2,5 +2,5 @@ Django
 django-cors-headers
 djangorestframework
 djangorestframework-simplejwt
-pyJWT
+PyJWT
 python-dotenv
