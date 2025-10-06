@@ -2,10 +2,15 @@ import {Navigate} from 'react-router-dom'
 import {jwtDecode} from 'jwt-decode'
 import api from '../api'
 import { REFRESH_TOEKEN, ACCESS_TOKEN } from '../constants'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function ProtectedRoute({children}){
     const [isAuthorized, setIsAuthorized] = useState(null)
+
+    useEffect(() => {
+        auth().catch(() => setIsAuthorized(false))
+    }, [])
+
 
     const refreshToken = async () => {
         const refreshToken = localStorage.getItem(REFRESH_TOEKEN)
