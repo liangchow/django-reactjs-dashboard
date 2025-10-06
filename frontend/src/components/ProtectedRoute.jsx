@@ -27,6 +27,7 @@ function ProtectedRoute({children}){
         }
     }
 
+    // Check if we have access token. If we do, auto refresh so that user can still login. If not, user will have to log in again.
     const auth = async () => {
         const token = localStorage.getItem(ACCESS_TOKEN)
         if (!token){
@@ -40,6 +41,7 @@ function ProtectedRoute({children}){
         if (tokenExpiration < now){
             await refreshToken()
         } else {
+            // token is still valid
             setIsAuthorized(true)
         }
     }
