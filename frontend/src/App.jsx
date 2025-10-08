@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Register  from './pages/Register'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import NotFound from './pages/NotFound'
+import ProctectedRoute from './components/ProtectedRoute'
 
 function Logout(){
   localStorage.clear()
