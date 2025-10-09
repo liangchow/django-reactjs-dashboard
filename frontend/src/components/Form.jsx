@@ -13,7 +13,23 @@ function Form({route, method}) {
     const name = method === 'login' ? "Login" : "Register"
 
     const handleSubmit = (e) => {
+        Setloading(true)
         e.preventDefault()
+
+        try {
+            const res = await api.post(route, {username, password})
+            if (method === "login"){
+                localStorage.setItem(ACCESS_TOKEN, res.data.access)
+                localStorage.setItem(REFRESH_TOKEN, res.data.refresh)
+                navigate('/')
+            } else {
+                navigate('/login')
+            }
+        } catch(err){
+            alert(err)
+        } finally {
+            Setloading(false)
+        }
     }
 
 
