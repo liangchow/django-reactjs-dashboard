@@ -3,7 +3,7 @@ import api from '../api'
 import { useNavigate } from 'react-router-dom'
 import { ACCESS_TOKEN, REFRESH_TOEKEN } from '../constants'
 
-function Form({route, method}) {
+export default function Form({route, method}) {
     const [username, setUsername] = useState('')
     const [password, setPassowrd] = useState('')
     const [loading, Setloading] = useState(false)
