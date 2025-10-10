@@ -12,7 +12,7 @@ export default function Form({route, method}) {
 
     const name = method === 'login' ? "Login" : "Register"
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         Setloading(true)
         e.preventDefault()
 
