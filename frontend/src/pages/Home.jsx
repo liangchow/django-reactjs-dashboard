@@ -9,7 +9,10 @@ export default function Home() {
   const [title, setTitle] = useState('')
 
   const getNote = () => {
-    api.get()
+    api.get('api/notes/')
+      .then((res) => res.data)
+      .then((data) => setNotes(data))
+      .catch((err => alert(err)))
   }
 
 
