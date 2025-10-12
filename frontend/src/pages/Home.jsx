@@ -8,10 +8,14 @@ export default function Home() {
   const [content, setContent] = useState('')
   const [title, setTitle] = useState('')
 
+  useEffect(() => {
+    getNotes()
+  }, [])
+
   const getNote = () => {
     api.get('api/notes/')
       .then((res) => res.data)
-      .then((data) => setNotes(data))
+      .then((data) => {setNotes(data); console.log(data)})
       .catch((err => alert(err)))
   }
 
