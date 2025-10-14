@@ -1,7 +1,7 @@
 import {Navigate} from 'react-router-dom'
 import {jwtDecode} from 'jwt-decode'
 import api from '../api'
-import { REFRESH_TOEKEN, ACCESS_TOKEN } from '../constants'
+import { REFRESH_TOKEN, ACCESS_TOKEN } from '../constants'
 import { useState, useEffect } from 'react'
 
 function ProtectedRoute({children}){
@@ -13,7 +13,7 @@ function ProtectedRoute({children}){
     }, [])
 
     const refreshToken = async () => {
-        const refreshToken = localStorage.getItem(REFRESH_TOEKEN)
+        const refreshToken = localStorage.getItem(REFRESH_TOKEN)
         try {
             // Send a request to backend to get a new access token
             const res = await api.post('/api/token/refresh/', {refresh: refreshToken,})
