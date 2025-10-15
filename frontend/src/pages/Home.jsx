@@ -33,7 +33,7 @@ export default function Home() {
       if (res.status === 201) alert('Note created')
         else alert('Failed to create note')
     }).catch((err) => alert(err))
-    getNotes
+    getNotes()
   }
 
   return (
