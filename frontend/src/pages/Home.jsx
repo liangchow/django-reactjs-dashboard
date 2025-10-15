@@ -37,6 +37,17 @@ export default function Home() {
   }
 
   return (
-    <div>Home</div>
+    <div>
+      <div>
+        <h2>Notes</h2>
+      </div>
+      <h2>Create a Note</h2>
+      <form onSubmit={createNote}>
+        <label htmlFor='title'>Title:</label>
+        <br />
+        <input type="text" id="title" name='title' value={title} required 
+          onChange={(e)=>setTitle(e.target.value)}  />
+      </form>
+    </div>
   )
 }
