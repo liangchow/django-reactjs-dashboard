@@ -22,7 +22,7 @@ export default function Home() {
   const deleteNote = (id) => {
     api.delete(`/api/notes/delete/${id}/`).then((res) => {
       if (res.status === 204) alert('Note deleted')
-        else alert('Failed to delete note')
+      else alert('Failed to delete note')
       getNotes()
     }).catch((err) => alert(err))
   }
@@ -31,7 +31,7 @@ export default function Home() {
     e.preventDefault()
     api.post('/api/notes/', {content, title}).then((res) => {
       if (res.status === 201) alert('Note created')
-        else alert('Failed to create note')
+      else alert('Failed to create note')
       getNotes()
     }).catch((err) => alert(err))
   }
