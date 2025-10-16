@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import api from '../api'
+import Note from '../components/Note'
 
 export default function Home() {
 
