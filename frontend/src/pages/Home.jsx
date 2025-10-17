@@ -51,7 +51,7 @@ export default function Home() {
         <br />
         <input type="text" id="title" name='title' value={title} required 
           onChange={(e)=>setTitle(e.target.value)}  />
-        <label htmlFor='title'>Content:</label>
+        <label htmlFor='content'>Content:</label>
         <br />
         <textarea id="content" name='content' value={content} required 
           onChange={(e)=>setContent(e.target.value)}></textarea>
