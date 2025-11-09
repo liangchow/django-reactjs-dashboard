@@ -10,4 +10,4 @@ https://forum.djangoproject.com/t/development-of-an-image-processing-application
 
 [Using Django for Image Processing](https://www.youtube.com/watch?v=yOaFjKkiCSM)
 
-https://www.youtube.com/watch?v=mgX-2_ybqNk
+[Deep Learning in Django || (Image Classification) || Complete tutorial 2020](https://www.youtube.com/watch?v=mgX-2_ybqNk)
